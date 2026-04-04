@@ -401,44 +401,85 @@
 
 <p>Tous les tarifs sont indiqués par heure de cours.</p>
 
-    <!-- ============================================================
-         TABLEAU DES TARIFS : modifie les lignes selon tes prix
-         ============================================================ -->
-    <table class="pricing-table" role="table">
-      <thead>
-        <tr>
-          <th>Niveau</th>
-          <th>Tarif / heure</th>
-        </tr>
-      </thead>
-      <tbody>
+<style>
+  .pricing-table th.col-highlight,
+  .pricing-table td.col-highlight {
+    background: linear-gradient(180deg, rgba(201,168,76,.13) 0%, rgba(201,168,76,.05) 100%);
+    border-left: 2px solid var(--gold);
+    border-right: 2px solid var(--gold);
+  }
+  .pricing-table thead tr th.col-highlight {
+    border-top: 2px solid var(--gold);
+    color: var(--gold-lt);
+  }
+  .pricing-table tbody tr:last-child td.col-highlight {
+    border-bottom: 2px solid var(--gold);
+  }
+  .best-deal {
+    display: inline-block;
+    background: var(--gold);
+    color: var(--ink);
+    font-size: .7rem;
+    font-weight: 600;
+    letter-spacing: .05em;
+    text-transform: uppercase;
+    padding: .2rem .6rem;
+    border-radius: 99px;
+    margin-bottom: .4rem;
+  }
+</style>
 
-        <tr>
-          <td>Collège (6ème – 3ème)</td>
-          <td>
-            <div class="price">36 €</div>
-            <div class="price-note">soit 18 € après crédit d'impôt *</div>
-          </td>
-        </tr>
+<table class="pricing-table" role="table">
+  <thead>
+    <tr>
+      <th>Niveau</th>
+      <th>Sans crédit d'impôt</th>
+      <th class="col-highlight">✦ Avec crédit d'impôt</th>
+    </tr>
+  </thead>
+  <tbody>
 
-        <tr>
-          <td>Lycée (2nde – 1ère)</td>
-          <td>
-            <div class="price">40 €</div>
-            <div class="price-note">soit 20 € après crédit d'impôt *</div>
-          </td>
-        </tr>
+    <tr>
+      <td>Collège (6ème – 3ème)</td>
+      <td>
+        <div class="price">24 €</div>
+        <div class="price-note">net / heure</div>
+      </td>
+      <td class="col-highlight">
+        <div class="best-deal">−25 %</div>
+        <div class="price">18 €</div>
+        <div class="price-note">net · soit 36 € brut *</div>
+      </td>
+    </tr>
 
-        <tr>
-          <td>Terminale / Bac</td>
-          <td>
-            <div class="price">50 €</div>
-            <div class="price-note">soit 25 € après crédit d'impôt *</div>
-          </td>
-        </tr>
+    <tr>
+      <td>Lycée (2nde – 1ère)</td>
+      <td>
+        <div class="price">27,50 €</div>
+        <div class="price-note">net / heure</div>
+      </td>
+      <td class="col-highlight">
+        <div class="best-deal">−25 %</div>
+        <div class="price">20 €</div>
+        <div class="price-note">net · soit 40 € brut *</div>
+      </td>
+    </tr>
 
-      </tbody>
-    </table>
+    <tr>
+      <td>Terminale / Bac</td>
+      <td>
+        <div class="price">33,50 €</div>
+        <div class="price-note">net / heure</div>
+      </td>
+      <td class="col-highlight">
+        <div class="best-deal">−25 %</div>
+        <div class="price">25 €</div>
+        <div class="price-note">net · soit 50 € brut *</div>
+      </td>
+    </tr>
+
+  </tbody>
+</table>
 
     <!-- ============================================================
          NOTE CRÉDIT D'IMPÔT : adapte si tu es auto-entrepreneur
