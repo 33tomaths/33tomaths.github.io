@@ -425,7 +425,13 @@
     text-transform: uppercase;
     padding: .2rem .6rem;
     border-radius: 99px;
-    margin-bottom: .4rem;
+    margin-left: .6rem;
+    vertical-align: middle;
+  }
+  .price-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
   }
 </style>
 
@@ -443,12 +449,14 @@
       <td>Collège (6ème – 3ème)</td>
       <td>
         <div class="price">24 €</div>
-        <div class="price-note">net / heure</div>
+        <div class="price-note">soit 48 € brut *</div>
       </td>
       <td class="col-highlight">
-        <div class="best-deal">−25 %</div>
-        <div class="price">18 €</div>
-        <div class="price-note">net · soit 36 € brut *</div>
+        <div class="price-row">
+          <div class="price">18 €</div>
+          <span class="best-deal">−25 %</span>
+        </div>
+        <div class="price-note">soit 36 € brut *</div>
       </td>
     </tr>
 
@@ -456,12 +464,14 @@
       <td>Lycée (2nde – 1ère)</td>
       <td>
         <div class="price">27,50 €</div>
-        <div class="price-note">net / heure</div>
+        <div class="price-note">soit 55 € brut *</div>
       </td>
       <td class="col-highlight">
-        <div class="best-deal">−25 %</div>
-        <div class="price">20 €</div>
-        <div class="price-note">net · soit 40 € brut *</div>
+        <div class="price-row">
+          <div class="price">20 €</div>
+          <span class="best-deal">−25 %</span>
+        </div>
+        <div class="price-note">soit 40 € brut *</div>
       </td>
     </tr>
 
@@ -469,12 +479,14 @@
       <td>Terminale / Bac</td>
       <td>
         <div class="price">33,50 €</div>
-        <div class="price-note">net / heure</div>
+        <div class="price-note">soit 67 € brut *</div>
       </td>
       <td class="col-highlight">
-        <div class="best-deal">−25 %</div>
-        <div class="price">25 €</div>
-        <div class="price-note">net · soit 50 € brut *</div>
+        <div class="price-row">
+          <div class="price">25 €</div>
+          <span class="best-deal">−25 %</span>
+        </div>
+        <div class="price-note">soit 50 € brut *</div>
       </td>
     </tr>
 
