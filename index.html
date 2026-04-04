@@ -433,8 +433,93 @@
     align-items: center;
     justify-content: space-between;
   }
+
+  /* ── MOBILE ───────────────────────────────────────────────── */
+  @media (max-width: 600px) {
+
+    /* cacher le tableau classique */
+    .pricing-table { display: none; }
+
+    /* cartes mobiles */
+    .pricing-cards { display: flex; flex-direction: column; gap: 1.2rem; margin-top: 2rem; }
+
+    .pricing-card {
+      background: white;
+      border: 1px solid var(--rule);
+      border-radius: 14px;
+      overflow: hidden;
+      box-shadow: 0 2px 12px rgba(26,26,46,.06);
+    }
+
+    .pricing-card-title {
+      background: var(--ink);
+      color: var(--gold-lt);
+      font-family: 'DM Serif Display', serif;
+      font-size: 1rem;
+      padding: .75rem 1.1rem;
+    }
+
+    .pricing-card-cols {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .pricing-card-col {
+      padding: .9rem 1rem;
+    }
+
+    .pricing-card-col:last-child {
+      background: linear-gradient(180deg, rgba(201,168,76,.13) 0%, rgba(201,168,76,.05) 100%);
+      border-left: 2px solid var(--gold);
+    }
+
+    .pricing-card-col-label {
+      font-size: .7rem;
+      font-weight: 500;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      margin-bottom: .4rem;
+    }
+
+    .pricing-card-col:last-child .pricing-card-col-label {
+      color: var(--gold);
+    }
+
+    .pricing-card-price {
+      font-family: 'DM Serif Display', serif;
+      font-size: 1.4rem;
+      color: var(--ink);
+    }
+
+    .pricing-card-note {
+      font-size: .75rem;
+      color: var(--muted);
+      margin-top: .2rem;
+    }
+
+    .pricing-card-badge {
+      display: inline-block;
+      background: var(--gold);
+      color: var(--ink);
+      font-size: .65rem;
+      font-weight: 600;
+      letter-spacing: .05em;
+      text-transform: uppercase;
+      padding: .15rem .5rem;
+      border-radius: 99px;
+      margin-left: .4rem;
+      vertical-align: middle;
+    }
+  }
+
+  /* cacher les cartes sur desktop */
+  @media (min-width: 601px) {
+    .pricing-cards { display: none; }
+  }
 </style>
 
+<!-- TABLEAU DESKTOP (inchangé) -->
 <table class="pricing-table" role="table">
   <thead>
     <tr>
@@ -444,12 +529,11 @@
     </tr>
   </thead>
   <tbody>
-
     <tr>
       <td>Collège (6ème – 3ème)</td>
       <td>
         <div class="price">24 €</div>
-        <div class="price-note">soit 24 € brut *</div>
+        <div class="price-note">tarif brut / heure</div>
       </td>
       <td class="col-highlight">
         <div class="price-row">
@@ -459,12 +543,11 @@
         <div class="price-note">soit 36 € brut *</div>
       </td>
     </tr>
-
     <tr>
       <td>Lycée (2nde – 1ère)</td>
       <td>
         <div class="price">27,50 €</div>
-        <div class="price-note">soit 27,50 € brut *</div>
+        <div class="price-note">tarif brut / heure</div>
       </td>
       <td class="col-highlight">
         <div class="price-row">
@@ -474,12 +557,11 @@
         <div class="price-note">soit 40 € brut *</div>
       </td>
     </tr>
-
     <tr>
       <td>Terminale / Bac</td>
       <td>
         <div class="price">33,50 €</div>
-        <div class="price-note">soit 33,50 € brut *</div>
+        <div class="price-note">tarif brut / heure</div>
       </td>
       <td class="col-highlight">
         <div class="price-row">
@@ -489,9 +571,61 @@
         <div class="price-note">soit 50 € brut *</div>
       </td>
     </tr>
-
   </tbody>
 </table>
+
+<!-- CARTES MOBILE -->
+<div class="pricing-cards">
+
+  <div class="pricing-card">
+    <div class="pricing-card-title">Collège (6ème – 3ème)</div>
+    <div class="pricing-card-cols">
+      <div class="pricing-card-col">
+        <div class="pricing-card-col-label">Sans crédit d'impôt</div>
+        <div class="pricing-card-price">24 €</div>
+        <div class="pricing-card-note">tarif brut / heure</div>
+      </div>
+      <div class="pricing-card-col">
+        <div class="pricing-card-col-label">✦ Avec crédit d'impôt</div>
+        <div class="pricing-card-price">18 € <span class="pricing-card-badge">−25 %</span></div>
+        <div class="pricing-card-note">soit 36 € brut *</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="pricing-card">
+    <div class="pricing-card-title">Lycée (2nde – 1ère)</div>
+    <div class="pricing-card-cols">
+      <div class="pricing-card-col">
+        <div class="pricing-card-col-label">Sans crédit d'impôt</div>
+        <div class="pricing-card-price">27,50 €</div>
+        <div class="pricing-card-note">tarif brut / heure</div>
+      </div>
+      <div class="pricing-card-col">
+        <div class="pricing-card-col-label">✦ Avec crédit d'impôt</div>
+        <div class="pricing-card-price">20 € <span class="pricing-card-badge">−25 %</span></div>
+        <div class="pricing-card-note">soit 40 € brut *</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="pricing-card">
+    <div class="pricing-card-title">Terminale / Bac</div>
+    <div class="pricing-card-cols">
+      <div class="pricing-card-col">
+        <div class="pricing-card-col-label">Sans crédit d'impôt</div>
+        <div class="pricing-card-price">33,50 €</div>
+        <div class="pricing-card-note">tarif brut / heure</div>
+      </div>
+      <div class="pricing-card-col">
+        <div class="pricing-card-col-label">✦ Avec crédit d'impôt</div>
+        <div class="pricing-card-price">25 € <span class="pricing-card-badge">−25 %</span></div>
+        <div class="pricing-card-note">soit 50 € brut *</div>
+      </div>
+    </div>
+  </div>
+
+</div>
 
     <!-- ============================================================
          NOTE CRÉDIT D'IMPÔT : adapte si tu es auto-entrepreneur
