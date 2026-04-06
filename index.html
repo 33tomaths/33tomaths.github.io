@@ -68,15 +68,13 @@
     }
 
     /* ============================================================
-       LOGO : remplace "logo.png" par le nom de ton fichier logo
+       LOGO : plus de cercle ni bordure, affichage direct
        ============================================================ */
     .logo-img {
       width: 90px;
       height: 90px;
       object-fit: contain;
-      border-radius: 50%;
-      border: 2px solid var(--gold-lt);
-      box-shadow: 0 4px 24px rgba(201,168,76,.18);
+      /* suppression de border-radius: 50% et border */
       margin-bottom: 1.4rem;
       display: block;
       margin-left: auto;
@@ -296,10 +294,8 @@
     -->
 
     <!-- Option A – avec image (décommente quand tu as ton logo) -->
+    <!-- Plus de cercle ni bordure : l'image s'affiche directement -->
     <img src="logo.png" alt="Logo" class="logo-img" />
-
-    <!-- Option B – fallback initiales (supprime quand tu actives A) -->
-    <!-- <div class="logo-placeholder" aria-hidden="true">M</div> -->
 
     <!-- ============================================================
          TITRE & SOUS-TITRE : modifie selon ton identité
@@ -519,7 +515,7 @@
   }
 </style>
 
-<!-- TABLEAU DESKTOP (inchangé) -->
+<!-- TABLEAU DESKTOP -->
 <table class="pricing-table" role="table">
   <thead>
     <tr>
@@ -534,42 +530,42 @@
       <td>
         <div class="price">24 €</div>
         <div class="price-note">tarif brut / heure</div>
-      </td>
+       </td>
       <td class="col-highlight">
         <div class="price-row">
           <div class="price">18 €</div>
           <span class="best-deal">−25 %</span>
         </div>
         <div class="price-note">soit 36 € brut *</div>
-      </td>
+       </td>
     </tr>
     <tr>
       <td>Lycée (2nde – 1ère)</td>
       <td>
         <div class="price">27,50 €</div>
         <div class="price-note">tarif brut / heure</div>
-      </td>
+       </td>
       <td class="col-highlight">
         <div class="price-row">
           <div class="price">20 €</div>
           <span class="best-deal">−25 %</span>
         </div>
         <div class="price-note">soit 40 € brut *</div>
-      </td>
+       </td>
     </tr>
     <tr>
       <td>Terminale / Bac</td>
       <td>
         <div class="price">33,50 €</div>
         <div class="price-note">tarif brut / heure</div>
-      </td>
+       </td>
       <td class="col-highlight">
         <div class="price-row">
           <div class="price">25 €</div>
           <span class="best-deal">−25 %</span>
         </div>
         <div class="price-note">soit 50 € brut *</div>
-      </td>
+       </td>
     </tr>
   </tbody>
 </table>
@@ -644,12 +640,9 @@
 ══════════════════════════════════════════════════════════════════ -->
 <footer>
   <div class="wrap">
-    <!-- ============================================================
-         FOOTER : modifie ton nom / mail / ville
-         ============================================================ -->
     <p>Cours de maths particuliers · Belin-Béliet &amp; alentours</p>
     <p style="margin-top:.3rem;">
-      <a href="mailto:33tomaths@gmail.com style="color:inherit;">33tomaths@gmail.com</a>
+      <a href="mailto:33tomaths@gmail.com" style="color:inherit;">33tomaths@gmail.com</a>
       &nbsp;·&nbsp;
       <a href="tel:+33618383073" style="color:inherit;">06 18 38 30 73</a>
     </p>
