@@ -362,7 +362,7 @@ avance-immediat.urssaf.fr
       <div class="highlight-card">
         <div class="card-icon">📐</div>
         <div class="card-title">Collège</div>
-        <div class="card-desc">6ème → 3ème, brevet inclus</div>
+        <div class="card-desc">6ème → 3ème</div>
       </div>
       <div class="highlight-card">
         <div class="card-icon">📊</div>
@@ -424,6 +424,23 @@ avance-immediat.urssaf.fr
     margin-left: .6rem;
     vertical-align: middle;
   }
+
+  .alt-deal {
+    display: inline-block;
+    background: linear-gradient(135deg, #c0c0c0 0%, #a8a8a8 100%);
+    color: #3a3a3a;
+    font-size: .7rem;
+    font-weight: 600;
+    letter-spacing: .05em;
+    text-transform: uppercase;
+    padding: .2rem .6rem;
+    border-radius: 99px;
+    margin-left: .6rem;
+    vertical-align: middle;
+    box-shadow: 0 1px 3px rgba(0,0,0,.08);
+    border: 1px solid rgba(255,255,255,.4);
+  }
+
   .price-row {
     display: flex;
     align-items: center;
@@ -457,11 +474,32 @@ avance-immediat.urssaf.fr
 
     .pricing-card-cols {
       display: grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: 1fr;
+    }
+
+    .pricing-card-base {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: .6rem 1.1rem;
+      background: #fdfaf5;
+      border-bottom: 1px solid var(--rule);
+    }
+    .pricing-card-base-label {
+      font-size: .72rem;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: .06em;
+    }
+    .pricing-card-base-price {
+      font-family: 'DM Serif Display', serif;
+      font-size: 1rem;
+      color: var(--ink);
     }
 
     .pricing-card-col {
       padding: .9rem 1rem;
+      text-align: center;
     }
 
     .pricing-card-col:last-child {
@@ -512,6 +550,12 @@ avance-immediat.urssaf.fr
   /* cacher les cartes sur desktop */
   @media (min-width: 601px) {
     .pricing-cards { display: none; }
+    .pricing-card-badge-alt {
+      background: linear-gradient(135deg, #c0c0c0 0%, #a8a8a8 100%);
+      color: #3a3a3a;
+      box-shadow: 0 1px 3px rgba(0,0,0,.08);
+      border: 1px solid rgba(255,255,255,.4);
+    }
   }
 </style>
 
@@ -520,52 +564,66 @@ avance-immediat.urssaf.fr
   <thead>
     <tr>
       <th>Niveau</th>
-      <th>Sans crédit d'impôt</th>
-      <th class="col-highlight">✦ Avec crédit d'impôt</th>
+      <th>Tarif de base</th>
+      <th class="col-highlight">✦ Après crédit d'impôt</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td>Collège (6ème – 3ème)</td>
       <td>
-        <div class="price">24 €</div>
-        <div class="price-note">soit 24€ brut / heure</div>
-       </td>
-      <td class="col-highlight">
-        <div class="price-row">
-          <div class="price">18 €</div>
-          <span class="best-deal">−25 %</span>
-        </div>
-        <div class="price-note">soit 36€ brut / heure</div>
-       </td>
-    </tr>
-    <tr>
-      <td>Lycée (2nde – 1ère)</td>
-      <td>
-        <div class="price">26.50€</div>
-        <div class="price-note">soit 26.50€ brut / heure</div>
-       </td>
+        <div class="price">40 €</div>
+        <div class="price-note">tarif brut / heure</div>
+      </td>
       <td class="col-highlight">
         <div class="price-row">
           <div class="price">20 €</div>
-          <span class="best-deal">−25 %</span>
+          <span class="best-deal">−50 %</span>
         </div>
-        <div class="price-note">soit 40€ brut / heure</div>
-       </td>
+        <div class="price-note">net après crédit d'impôt</div>
+      </td>
+    </tr>
+    <tr>
+      <td>Seconde</td>
+      <td>
+        <div class="price">44 €</div>
+        <div class="price-note">tarif brut / heure</div>
+      </td>
+      <td class="col-highlight">
+        <div class="price-row">
+          <div class="price">22 €</div>
+          <span class="best-deal">−50 %</span>
+        </div>
+        <div class="price-note">net après crédit d'impôt</div>
+      </td>
+    </tr>
+    <tr>
+      <td>Première</td>
+      <td>
+        <div class="price">48 €</div>
+        <div class="price-note">tarif brut / heure</div>
+      </td>
+      <td class="col-highlight">
+        <div class="price-row">
+          <div class="price">24 €</div>
+          <span class="best-deal">−50 %</span>
+        </div>
+        <div class="price-note">net après crédit d'impôt</div>
+      </td>
     </tr>
     <tr>
       <td>Terminale / Bac</td>
       <td>
-        <div class="price">33.50€</div>
-        <div class="price-note">soit 33.50€ brut / heure</div>
-       </td>
+        <div class="price">52 €</div>
+        <div class="price-note">tarif brut / heure</div>
+      </td>
       <td class="col-highlight">
         <div class="price-row">
-          <div class="price">25 €</div>
-          <span class="best-deal">−25 %</span>
+          <div class="price">26 €</div>
+          <span class="best-deal">−50 %</span>
         </div>
-        <div class="price-note">soit 50€ brut / heure</div>
-       </td>
+        <div class="price-note">net après crédit d'impôt</div>
+      </td>
     </tr>
   </tbody>
 </table>
@@ -575,48 +633,60 @@ avance-immediat.urssaf.fr
 
   <div class="pricing-card">
     <div class="pricing-card-title">Collège (6ème – 3ème)</div>
+    <div class="pricing-card-base">
+      <span class="pricing-card-base-label">Tarif de base</span>
+      <span class="pricing-card-base-price">40 € /h</span>
+    </div>
     <div class="pricing-card-cols">
-      <div class="pricing-card-col">
-        <div class="pricing-card-col-label">Sans crédit d'impôt</div>
-        <div class="pricing-card-price">24 €</div>
-        <div class="pricing-card-note">tarif brut / heure</div>
-      </div>
-      <div class="pricing-card-col">
-        <div class="pricing-card-col-label">✦ Avec crédit d'impôt</div>
-        <div class="pricing-card-price">18 € <span class="pricing-card-badge">−25 %</span></div>
-        <div class="pricing-card-note">soit 36 € brut</div>
+      <div class="pricing-card-col pricing-card-col-highlight">
+        <div class="pricing-card-col-label">✦ Après crédit d'impôt</div>
+        <div class="pricing-card-price">20 € <span class="pricing-card-badge">−50 %</span></div>
+        <div class="pricing-card-note">net après crédit d'impôt</div>
       </div>
     </div>
   </div>
 
   <div class="pricing-card">
-    <div class="pricing-card-title">Lycée (2nde – 1ère)</div>
+    <div class="pricing-card-title">Seconde</div>
+    <div class="pricing-card-base">
+      <span class="pricing-card-base-label">Tarif de base</span>
+      <span class="pricing-card-base-price">44 € /h</span>
+    </div>
     <div class="pricing-card-cols">
-      <div class="pricing-card-col">
-        <div class="pricing-card-col-label">Sans crédit d'impôt</div>
-        <div class="pricing-card-price">27,50 €</div>
-        <div class="pricing-card-note">tarif brut / heure</div>
+      <div class="pricing-card-col pricing-card-col-highlight">
+        <div class="pricing-card-col-label">✦ Après crédit d'impôt</div>
+        <div class="pricing-card-price">22 € <span class="pricing-card-badge">−50 %</span></div>
+        <div class="pricing-card-note">net après crédit d'impôt</div>
       </div>
-      <div class="pricing-card-col">
-        <div class="pricing-card-col-label">✦ Avec crédit d'impôt</div>
-        <div class="pricing-card-price">20 € <span class="pricing-card-badge">−25 %</span></div>
-        <div class="pricing-card-note">soit 40 € brut</div>
+    </div>
+  </div>
+
+  <div class="pricing-card">
+    <div class="pricing-card-title">Première</div>
+    <div class="pricing-card-base">
+      <span class="pricing-card-base-label">Tarif de base</span>
+      <span class="pricing-card-base-price">48 € /h</span>
+    </div>
+    <div class="pricing-card-cols">
+      <div class="pricing-card-col pricing-card-col-highlight">
+        <div class="pricing-card-col-label">✦ Après crédit d'impôt</div>
+        <div class="pricing-card-price">24 € <span class="pricing-card-badge">−50 %</span></div>
+        <div class="pricing-card-note">net après crédit d'impôt</div>
       </div>
     </div>
   </div>
 
   <div class="pricing-card">
     <div class="pricing-card-title">Terminale / Bac</div>
+    <div class="pricing-card-base">
+      <span class="pricing-card-base-label">Tarif de base</span>
+      <span class="pricing-card-base-price">52 € /h</span>
+    </div>
     <div class="pricing-card-cols">
-      <div class="pricing-card-col">
-        <div class="pricing-card-col-label">Sans crédit d'impôt</div>
-        <div class="pricing-card-price">33,50 €</div>
-        <div class="pricing-card-note">tarif brut / heure</div>
-      </div>
-      <div class="pricing-card-col">
-        <div class="pricing-card-col-label">✦ Avec crédit d'impôt</div>
-        <div class="pricing-card-price">25 € <span class="pricing-card-badge">−25 %</span></div>
-        <div class="pricing-card-note">soit 50 € brut</div>
+      <div class="pricing-card-col pricing-card-col-highlight">
+        <div class="pricing-card-col-label">✦ Après crédit d'impôt</div>
+        <div class="pricing-card-price">26 € <span class="pricing-card-badge">−50 %</span></div>
+        <div class="pricing-card-note">net après crédit d'impôt</div>
       </div>
     </div>
   </div>
