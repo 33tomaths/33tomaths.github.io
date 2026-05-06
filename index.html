@@ -24,7 +24,7 @@
       --muted:    #6b6b7b;
       --rule:     #e2ddd6;
     }
-avance-immediat.urssaf.fr
+
     /* ─── RESET ───────────────────────────────────────────────── */
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; }
@@ -611,6 +611,7 @@ avance-immediat.urssaf.fr
         <div class="price-note">net après crédit d'impôt</div>
       </td>
     </tr>
+    <tr>
       <td>BAC+1</td>
       <td>
         <div class="price">70 €</div>
@@ -631,22 +632,7 @@ avance-immediat.urssaf.fr
 <div class="pricing-cards">
 
   <div class="pricing-card">
-    <div class="pricing-card-title">Collège (6ème – 3ème)</div>
-    <div class="pricing-card-base">
-      <span class="pricing-card-base-label">Tarif de base</span>
-      <span class="pricing-card-base-price">40 € /h</span>
-    </div>
-    <div class="pricing-card-cols">
-      <div class="pricing-card-col pricing-card-col-highlight">
-        <div class="pricing-card-col-label">✦ Après crédit d'impôt</div>
-        <div class="pricing-card-price">20 € <span class="pricing-card-badge">−50 %</span></div>
-        <div class="pricing-card-note">net après crédit d'impôt</div>
-      </div>
-    </div>
-  </div>
-
-  <div class="pricing-card">
-    <div class="pricing-card-title">Seconde</div>
+    <div class="pricing-card-title">Collège & Seconde</div>
     <div class="pricing-card-base">
       <span class="pricing-card-base-label">Tarif de base</span>
       <span class="pricing-card-base-price">44 € /h</span>
@@ -664,21 +650,6 @@ avance-immediat.urssaf.fr
     <div class="pricing-card-title">Première</div>
     <div class="pricing-card-base">
       <span class="pricing-card-base-label">Tarif de base</span>
-      <span class="pricing-card-base-price">48 € /h</span>
-    </div>
-    <div class="pricing-card-cols">
-      <div class="pricing-card-col pricing-card-col-highlight">
-        <div class="pricing-card-col-label">✦ Après crédit d'impôt</div>
-        <div class="pricing-card-price">24 € <span class="pricing-card-badge">−50 %</span></div>
-        <div class="pricing-card-note">net après crédit d'impôt</div>
-      </div>
-    </div>
-  </div>
-
-  <div class="pricing-card">
-    <div class="pricing-card-title">Terminale / Bac</div>
-    <div class="pricing-card-base">
-      <span class="pricing-card-base-label">Tarif de base</span>
       <span class="pricing-card-base-price">52 € /h</span>
     </div>
     <div class="pricing-card-cols">
@@ -690,93 +661,49 @@ avance-immediat.urssaf.fr
     </div>
   </div>
 
-</div>
-
-<!-- ── FRAIS DE DÉPLACEMENT ───────────────────────────────────── -->
-<div style="margin-top: 2rem;">
-
-  <div style="
-    display: flex;
-    align-items: center;
-    gap: .6rem;
-    margin-bottom: 1rem;
-  ">
-    <span style="font-size:1rem; color:var(--gold);">🚗</span>
-    <span style="
-      font-size: .72rem;
-      font-weight: 500;
-      letter-spacing: .14em;
-      text-transform: uppercase;
-      color: var(--gold);
-    ">Frais de déplacement</span>
-  </div>
-
-  <!-- Règle principale -->
-  <div style="
-    background: white;
-    border: 1px solid var(--rule);
-    border-left: 3px solid var(--gold);
-    border-radius: 10px;
-    padding: 1.1rem 1.4rem;
-    display: flex;
-    align-items: center;
-    gap: 1.2rem;
-    box-shadow: 0 2px 12px rgba(26,26,46,.05);
-    margin-bottom: 1rem;
-  ">
-    <div style="
-      font-family: 'DM Serif Display', serif;
-      font-size: 2rem;
-      color: var(--ink);
-      white-space: nowrap;
-      flex-shrink: 0;
-    ">0,1 € <span style="font-size:1rem; color:var(--muted); font-family:'DM Sans',sans-serif; font-weight:300;">/ km</span></div>
-    <div style="font-size:.88rem; color:#3a3a4a; line-height:1.6;">
-      Les frais de déplacement sont calculés sur la distance aller-retour entre mon domicile et le vôtre,
-      et s'ajoutent au tarif horaire indiqué ci-dessus.
+  <div class="pricing-card">
+    <div class="pricing-card-title">Terminale / Bac</div>
+    <div class="pricing-card-base">
+      <span class="pricing-card-base-label">Tarif de base</span>
+      <span class="pricing-card-base-price">64 € /h</span>
+    </div>
+    <div class="pricing-card-cols">
+      <div class="pricing-card-col pricing-card-col-highlight">
+        <div class="pricing-card-col-label">✦ Après crédit d'impôt</div>
+        <div class="pricing-card-price">32 € <span class="pricing-card-badge">−50 %</span></div>
+        <div class="pricing-card-note">net après crédit d'impôt</div>
+      </div>
     </div>
   </div>
 
-  <!-- Exemples chiffrés -->
-  <div style="
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
-    gap: .75rem;
-  ">
-    <div style="background:#fdfaf5; border:1px solid var(--rule); border-radius:10px; padding:.85rem 1rem; text-align:center;">
-      <div style="font-size:.72rem; text-transform:uppercase; letter-spacing:.1em; color:var(--muted); margin-bottom:.3rem;">5 km A/R</div>
-      <div style="font-family:'DM Serif Display',serif; font-size:1.2rem; color:var(--ink);">+ 0,5 €</div>
+  <div class="pricing-card">
+    <div class="pricing-card-title">BAC+1</div>
+    <div class="pricing-card-base">
+      <span class="pricing-card-base-label">Tarif de base</span>
+      <span class="pricing-card-base-price">70 € /h</span>
     </div>
-    <div style="background:#fdfaf5; border:1px solid var(--rule); border-radius:10px; padding:.85rem 1rem; text-align:center;">
-      <div style="font-size:.72rem; text-transform:uppercase; letter-spacing:.1em; color:var(--muted); margin-bottom:.3rem;">10 km A/R</div>
-      <div style="font-family:'DM Serif Display',serif; font-size:1.2rem; color:var(--ink);">+ 1 €</div>
+    <div class="pricing-card-cols">
+      <div class="pricing-card-col pricing-card-col-highlight">
+        <div class="pricing-card-col-label">✦ Après crédit d'impôt</div>
+        <div class="pricing-card-price">35 € <span class="pricing-card-badge">−50 %</span></div>
+        <div class="pricing-card-note">net après crédit d'impôt</div>
+      </div>
     </div>
-    <div style="background:#fdfaf5; border:1px solid var(--rule); border-radius:10px; padding:.85rem 1rem; text-align:center;">
-      <div style="font-size:.72rem; text-transform:uppercase; letter-spacing:.1em; color:var(--muted); margin-bottom:.3rem;">20 km A/R</div>
-      <div style="font-family:'DM Serif Display',serif; font-size:1.2rem; color:var(--ink);">+ 2 €</div>
-    </div>
-    <div style="background:#fdfaf5; border:1px solid var(--rule); border-radius:10px; padding:.85rem 1rem; text-align:center;">
-      <div style="font-size:.72rem; text-transform:uppercase; letter-spacing:.1em; color:var(--muted); margin-bottom:.3rem;">30 km A/R</div>
-      <div style="font-family:'DM Serif Display',serif; font-size:1.2rem; color:var(--ink);">+ 3€</div>
-    </div>
-  </div>
-
-  <!-- Note crédit d'impôt -->
-  <div style="
-    margin-top: .9rem;
-    background: rgba(201,168,76,.08);
-    border: 1px solid rgba(201,168,76,.3);
-    border-radius: 8px;
-    padding: .8rem 1.1rem;
-    font-size: .82rem;
-    color: var(--muted);
-  ">
-    ✦ <strong style="color:var(--ink);">Bon à savoir :</strong>
-    les frais de déplacement sont inclus dans la base de calcul du crédit d'impôt — vous en récupérez donc également 50 %.
   </div>
 
 </div>
-<!-- ── FIN FRAIS DE DÉPLACEMENT ─────────────────────────────────── -->
+
+<!-- ── NOTE DÉPLACEMENT INCLUS ─────────────────────────────────── -->
+<div style="margin-top: 2rem; background: white; border: 1px solid var(--rule); border-left: 3px solid var(--gold); border-radius: 10px; padding: 1.1rem 1.4rem; box-shadow: 0 2px 12px rgba(26,26,46,.05);">
+  <div style="display: flex; align-items: center; gap: .8rem;">
+    <span style="font-size:1.4rem;">🚗</span>
+    <div>
+      <div style="font-weight:500; color:var(--ink); margin-bottom:.15rem;">Déplacement inclus</div>
+      <div style="font-size:.85rem; color:var(--muted);">Les tarifs affichés incluent le déplacement à votre domicile dans un rayon de 20 km autour de Belin-Béliet. Au-delà, n'hésitez pas à me contacter — nous trouverons une solution (visio ou léger supplément).</div>
+    </div>
+  </div>
+</div>
+<!-- ── FIN NOTE DÉPLACEMENT INCLUS ─────────────────────────────── -->
 
   </div>
 </section>
